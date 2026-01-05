@@ -32,7 +32,7 @@ public class UnitSelectionManager : MonoBehaviour
     }
 
     private void Update(){
-        if (Mouse.current.leftButton.isPressed)
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -52,7 +52,7 @@ public class UnitSelectionManager : MonoBehaviour
             }
         }
 
-        if (Mouse.current.rightButton.isPressed && unitsSelected.Count > 0)
+        if (Mouse.current.rightButton.wasPressedThisFrame && unitsSelected.Count > 0)
         {
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
