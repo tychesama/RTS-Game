@@ -7,9 +7,10 @@ public class Unit : MonoBehaviour
         UnitSelectionManager.Instance.allUnitsList.Add(gameObject);
     }
 
-    private void onDestroy()
+    private void OnDestroy()
     {
-        UnitSelectionManager.Instance.allUnitsList.Remove(gameObject);
+        if (UnitSelectionManager.Instance != null)
+            UnitSelectionManager.Instance.allUnitsList.Remove(gameObject);
     }
 
 }
