@@ -21,21 +21,22 @@ public class UnitFollowState : StateMachineBehaviour
         {
             animator.SetBool("isFollowing", false);
         }
+        else 
+        {
+            if (animator.transform.GetComponent<UnitMovement>().isCommandedToMove == false) // no other priority move command
+            {
+                // to move on enemy?
+                agent.SetDestination(attackController.targetToAttack.position);
+                animator.transform.LookAt(attackController.targetToAttack);
 
-        // to move on enemy?
-        agent.SetDestination(attackController.targetToAttack.position);
-        animator.transform.LookAt(attackController.targetToAttack);
-
-        // to attack?
-        // float distanceFromTarget = Vector3.Distance(attackController.targetToAttack.position, animator.transform.position);
-        // if (distanceFromTarget < attackingDistance)
-        // {
-        //     animator.SetBool("isAttacking", true); // attack state on
-        // }
-    }
-
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        agent.SetDestination(animator.transform.position);
+                // to attack?
+                // float distanceFromTarget = Vector3.Distance(attackController.targetToAttack.position, animator.transform.position);
+                // if (distanceFromTarget < attackingDistance)
+                // {
+                //     agent.SetDestination(animator.transform.position);
+                //     animator.SetBool("isAttacking", true); // attack state on
+                // }
+            }
+        }
     }
 }
