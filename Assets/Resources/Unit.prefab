@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 2814027587506684974}
   - component: {fileID: 7885737811809938016}
   - component: {fileID: 6002027956008622855}
+  - component: {fileID: 4857885444742662555}
   m_Layer: 7
   m_Name: Unit
   m_TagString: Untagged
@@ -146,8 +147,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.53, y: 1.204, z: 11.21}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2005850488063232748}
   m_Father: {fileID: 0}
@@ -281,3 +282,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c89c3f89939f94db100b1f04edd5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Unit
+--- !u!114 &4857885444742662555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6138153976831963521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b662c8046d35f934190057231d9b7a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackController
+  targetToAttack: {fileID: 0}
