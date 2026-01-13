@@ -11,6 +11,7 @@ public class UnitFollowState : StateMachineBehaviour
     {
         attackController = animator.transform.GetComponent<AttackController>();
         agent = animator.transform.GetComponent<UnityEngine.AI.NavMeshAgent>();
+        attackController.setFollowMaterial();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -30,13 +31,18 @@ public class UnitFollowState : StateMachineBehaviour
                 animator.transform.LookAt(attackController.targetToAttack);
 
                 // to attack?
-                // float distanceFromTarget = Vector3.Distance(attackController.targetToAttack.position, animator.transform.position);
-                // if (distanceFromTarget < attackingDistance)
-                // {
-                //     agent.SetDestination(animator.transform.position);
-                //     animator.SetBool("isAttacking", true); // attack state on
-                // }
+                float distanceFromTarget = Vector3.Distance(attackController.targetToAttack.position, animator.transform.position);
+                if (distanceFromTarget < attackingDistance)
+                {
+                    agent.SetDestination(animator.transform.position);
+                    animator.SetBool("isAttacking", true); // attack state on
+                }
             }
         }
+    }
+
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        
     }
 }
