@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6138153976831963521, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7333268633061615122, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.25
@@ -280,7 +284,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 394668862}
-  - component: {fileID: 394668863}
   - component: {fileID: 394668864}
   m_Layer: 0
   m_Name: CameraController
@@ -305,18 +308,6 @@ Transform:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!114 &394668863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394668861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0425b8b037ae1dc42810576a91a2f00f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &394668864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,6 +746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6138153976831963521, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7333268633061615122, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.25
@@ -920,6 +915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6138153976831963521, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7333268633061615122, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.25
@@ -992,6 +991,10 @@ PrefabInstance:
     - target: {fileID: 6138153976831963521, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
       propertyPath: m_Name
       value: Unit (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138153976831963521, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333268633061615122, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
       propertyPath: m_LocalScale.x
@@ -1248,6 +1251,10 @@ PrefabInstance:
     - target: {fileID: 6138153976831963521, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
       propertyPath: m_Name
       value: Unit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138153976831963521, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333268633061615122, guid: df6b2d0577261174fbb73ee8c2010e02, type: 3}
       propertyPath: m_LocalScale.x
