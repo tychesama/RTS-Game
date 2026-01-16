@@ -8,6 +8,8 @@ public class AttackController : MonoBehaviour
     public Material followStateMaterial;
     public Material attackStateMaterial;
 
+    public int unitDamage;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Enemy") && targetToAttack == null)
@@ -37,5 +39,22 @@ public class AttackController : MonoBehaviour
     public void setAttackMaterial()
     {
         GetComponent<Renderer>().material = attackStateMaterial;
+    }
+
+    private void OnDrawGizmos()
+    {
+        // follow distance
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position,15f*0.25f);
+
+
+        // should be the same with the other parameters
+
+        // attack distance
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 1f);
+        // stop attack distance
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position,1.2f);
     }
 }

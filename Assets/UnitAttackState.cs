@@ -25,6 +25,10 @@ public class UnitAttackState : StateMachineBehaviour
 
             agent.SetDestination(attackController.targetToAttack.position); // move towards target
 
+            var damageToInflict = attackController.unitDamage;
+            // attack
+            attackController.targetToAttack.GetComponent<Enemy>().ReceiveDamage(damageToInflict);
+
             float distanceFromTarget = Vector3.Distance(attackController.targetToAttack.position, animator.transform.position);
             if (distanceFromTarget > stopAttackDistance || attackController.targetToAttack == null)
             {
