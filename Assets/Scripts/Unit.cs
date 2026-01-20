@@ -13,4 +13,9 @@ public class Unit : MonoBehaviour
             UnitSelectionManager.Instance.allUnitsList.Remove(gameObject);
     }
 
+    public void TakeDamage(int damageToInflict)
+    {
+        
+    }
+
 }
